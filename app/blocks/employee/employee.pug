@@ -1,8 +1,0 @@
-mixin employee(href, src, name, job)
-  +b.employee&attributes(attributes)
-    +e.A(href= href, target='_blank').image-link
-      +e.IMG(src= src).image
-    +e.info
-      +e.name!= name
-      +e.job!= job
-    block

@@ -1,8 +1,0 @@
-mixin blog-card(href, src, title, description)
-  +b.blog-card&attributes(attributes)
-    +e.A(href= href, target='_blank').image-link
-      +e.IMG(src= src).image
-    +e.info
-      +e.H3.title!= title
-      +e.P.description!= description
-    block

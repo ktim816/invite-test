@@ -1,8 +1,0 @@
-mixin nav(data)
-  +b.NAV.nav.js-nav&attributes(attributes)
-    +e.UL.list
-      each item in data
-        - const { href, name } = item
-        +e.LI.list-item
-          +e.A(href= href).link!= name
-    block
