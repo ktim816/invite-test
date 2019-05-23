@@ -1,0 +1,13 @@
+.form {
+  display: block;
+
+  $this: &;
+
+  &__inputs {
+    display: flex;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+}

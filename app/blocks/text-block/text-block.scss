@@ -1,0 +1,26 @@
+.text-block {
+  display: block;
+  padding: 10px 19px;
+  width: 100%;
+  background-color: $color-main;
+
+  $this: &;
+
+  &--70 {
+    width: 70%;
+  }
+
+  &--76 {
+    width: 76%;
+  }
+
+  &--82 {
+    width: 82%;
+  }
+
+  &__content {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

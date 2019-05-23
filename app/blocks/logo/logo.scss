@@ -1,0 +1,61 @@
+.logo {
+  position: relative;
+  display: block;
+
+  $this: &;
+
+  &__link {
+    @include text-logo;
+    @include size(67px);
+
+    position: relative;
+    top: 0;
+    left: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: $color-main;
+    color: $color-lighten;
+    transition:
+      opacity $ease-main,
+      top $ease-main,
+      left $ease-main,
+      border-color $ease-main,
+      width $ease-main,
+      height $ease-main,
+      font-size $ease-main;
+
+    @include screen('xs') {
+      @include size(60px);
+    }
+
+    &::before {
+      @include pseudo;
+      @include size(67px);
+
+      @include screen('xs') {
+        @include size(60px);
+      }
+
+      z-index: -1;
+      bottom: -8px;
+      right: -12px;
+      background-color: $color-light;
+      transition: bottom $ease-main, right $ease-main, width $ease-main, height $ease-main;
+    }
+
+    &:hover {
+      top: 8px;
+      left: 12px;
+
+      &::before {
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__text {
+    @include center-block;
+  }
+}

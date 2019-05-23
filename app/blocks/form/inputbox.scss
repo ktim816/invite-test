@@ -1,0 +1,28 @@
+.inputbox {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+
+  $this: &;
+
+  .input {
+
+    &[data-valid="true"] #{$this} {
+      color: $color-valid;
+    }
+
+    &[data-valid="false"] #{$this} {
+      color: $color-invalid;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+}

@@ -1,0 +1,106 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = projectName + ' | index'
+
+block content
+
+  +hero('#features', `${imagePath}hero-bg.jpg`, 'Creatives', 'Power by PSDfreebies.com')
+  +section#features.--features.--theme-primary
+    +section-header.--center
+      +section-title
+        h2 We Are An Awesome Agency
+    +section-content
+      +grid
+        +col({ xl: 3, lg: 6, xs: 12 })
+          +feature('write', 'Feature one', 'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus')
+        +col({ xl: 3, lg: 6, xs: 12 })
+          +feature('write', 'Feature two', 'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus')
+        +col({ xl: 3, lg: 6, xs: 12 })
+          +feature('search', 'Feature three', 'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus')
+        +col({ xl: 3, lg: 6, xs: 12 })
+          +feature('message', 'Feature four', 'Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus')
+  +section(false).--news
+    +section-content
+      +news(`${imagePath}news-img_1.jpg`, 'Jan 4, 2016&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;In Culture', 'Akita Inu Dog').--dark
+        +news-description('Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.')
+        +news-description('Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere')
+      +news(`${imagePath}news-img_2.jpg`, 'Jan 4, 2016&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;In Culture', 'Akita Inu Dog').--light.--reverse
+        +news-description('Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.')
+        +news-description('Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere')
+  +section.--blog
+    +section-header.--center
+      +section-title
+        h2 Let's blog
+      +section-subtitle We love clean design and advanced digital solutions.
+    +section-content
+      +grid
+        +col({ xl: 3, md: 6, sm: 12 })
+          +blog-card('#', `${imagePath}blog-img_1.jpg`, 'Fresh Summer Campaign', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue')
+        +col({ xl: 3, md: 6, sm: 12 })
+          +blog-card('#', `${imagePath}blog-img_2.jpg`, 'Fresh Summer Campaign', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue')
+        +col({ xl: 3, md: 6, sm: 12 })
+          +blog-card('#', `${imagePath}blog-img_3.jpg`, 'Fresh Summer Campaign', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue')
+        +col({ xl: 3, md: 6, sm: 12 })
+          +blog-card('#', `${imagePath}blog-img_1.jpg`, 'Fresh Summer Campaign', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue')
+  +section.--quick-action.--theme-primary
+    +section-content
+      +quick-action('write', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.')
+      +quick-action('write', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.')
+  +section(false).--key-feature
+    +section-bg-img(`${imagePath}feature-bg.jpg`)
+    .container
+      +section-content
+        +section-col
+          +section-wrapper
+            +section-header.--left
+              +section-title
+                h3 Akita Inu Dog
+              +section-description Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+            +section-block
+              +text-block('Fully Responsive Design', 70)
+              +text-block('High Quality Code', 76)
+              +text-block('Different Headers & Layout', 82)
+        +section-col
+          +section-image(`${imagePath}phone-img.png`, 'Телефон')
+  +section.--team
+    +section-header.--center
+      +section-title
+        h2 Our Team
+      +section-subtitle sales long tail influencer pitch release niche market.
+    +section-content
+      +grid
+        +col({ xl: 3, md: 6, sm: 12 })
+          +employee('#', `${imagePath}employee-img_1.jpg`, 'John Snow', 'Ceo')
+        +col({ xl: 3, md: 6, sm: 12 })
+          +employee('#', `${imagePath}employee-img_2.jpg`, 'Lady Sansa', 'WebDesigner')
+        +col({ xl: 3, md: 6, sm: 12 })
+          +employee('#', `${imagePath}employee-img_3.jpg`, 'David Smith', 'Photographer')
+        +col({ xl: 3, md: 6, sm: 12 })
+          +employee('#', `${imagePath}employee-img_4.jpg`, 'Lady Sansa', 'Photographer')
+  +section(false).--contact
+    +section-bg-img(`${imagePath}contact-bg.jpg`)
+    .container
+      +section-header.--center
+        +section-title
+          h2 We’d love to hear about your project.
+      +section-content
+        +form(action='server.php', method='POST')#contact-form
+          +form-inputs
+            +inputbox
+              +input(type='text', placeholder='Name', name='name', data-valid='')
+              +valid-message
+            +inputbox
+              +input(type='email', placeholder='Email', name='email', data-type='email', data-valid='')
+              +valid-message
+            +inputbox
+              +input(type='tel', placeholder='Phone', name='phone', data-type='tel', data-valid='')
+              +valid-message
+          +inputbox
+            +textarea(placeholder='Message', name='message', data-valid='')
+            +valid-message
+          +form-buttons
+            +button('Submit').js-submit
+  +section(false).--map
+    +map(id='map')
+  +footer

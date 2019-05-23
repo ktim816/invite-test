@@ -1,0 +1,6 @@
+mixin quick-action(iconName, description)
+  +b.quick-action&attributes(attributes)
+    +e.icon-wrap
+      +icon(iconName).icon
+    +e.P.description!= description
+    block

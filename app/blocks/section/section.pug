@@ -1,0 +1,55 @@
+mixin section(hasContainer= true)
+  +b.SECTION.section&attributes(attributes)
+    if (hasContainer)
+      .container
+        block
+    else
+      block
+
+mixin section-header()
+  +e.header&attributes(attributes)
+    block
+
+mixin section-title()
+  +e.title&attributes(attributes)
+    block
+
+mixin section-subtitle()
+  +e.P.subtitle&attributes(attributes)
+    block
+
+mixin section-list()
+  +e.UL.list&attributes(attributes)
+    block
+
+mixin section-list-item()
+  +e.LI.list-item&attributes(attributes)
+    block
+
+mixin section-bg-img(src, alt= '', isTitle= false)
+  +e.IMG(src= src, alt= alt, title= isTitle ? alt : '').bg-img&attributes(attributes)
+    block
+
+mixin section-image(src, alt= '', isTitle= false)
+  +e.IMG(src= src, alt= alt, title= isTitle ? alt : '').image&attributes(attributes)
+    block
+
+mixin section-description()
+  +e.P.description&attributes(attributes)
+    block
+
+mixin section-content()
+  +e.content&attributes(attributes)
+    block
+
+mixin section-wrapper()
+  +e.wrapper&attributes(attributes)
+    block
+
+mixin section-block()
+  +e.block&attributes(attributes)
+    block
+
+mixin section-col()
+  +e.col&attributes(attributes)
+    block

@@ -1,0 +1,34 @@
+.footer {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $color-dark;
+
+  $this: &;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include screen('sm') {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+
+    @include screen('sm') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copyright,
+  &__made-by {
+    font-family: $font-second;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .35px;
+    color: $color-light;
+  }
+}

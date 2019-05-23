@@ -1,0 +1,72 @@
+// Здесь используем комментарии только через "//", т.к. они нам не нужны в итоговом css-файле
+
+// ##########
+// Базовые настройки сетки сайта
+// ##########
+$container-width: 1240px; // Максимальная ширина контейнера контента
+$container-padding: 30px; // Отступы слева и справа у контейнера
+$grid-container-width: 100%; // Ширина контейнера сетки
+$grid-cols: 12; // Количество колонок в сетке
+$grid-gap: 20px; // Расстояние между колонками
+$grid-gap-vertical: 20px; // Расстояние между строками в сетке
+$breakpoints: (
+  'xl': 1920px,
+  'lg': 1280px,
+  'md': 1024px,
+  'sm': 768px,
+  'xs': 480px
+);
+
+// ##########
+// Цвета
+// ##########
+$white: #fff;
+$black: #000;
+$blue-chill: #11749e;
+$wild-sand: #f5f5f5;
+$astral: #2e85aa;
+$mine-shaft: #222;
+$concrete: #f3f3f3;
+
+// ##########
+// Семантические цвета
+// ##########
+$color-valid: green;
+$color-invalid: red;
+$color-feature: $astral;
+$color-lighten: $wild-sand;
+$color-lighter: $concrete;
+$color-light: $white;
+$color-basic: $mine-shaft;
+$color-dark: $mine-shaft;
+$color-darker: $black;
+$color-body: $white;
+$color-placeholder: $white;
+$color-input: $white;
+$color-main: $blue-chill;
+$color-border: $white;
+
+// ##########
+// Массив цветов для UI-кита
+// ##########
+$colors: (
+  '$color-basic': black,
+  '$color-placeholder': #777,
+  '$color-input': black,
+  '$color-main': #2252d8,
+  '$color-border': #ccc,
+);
+
+// ##########
+// Transitions
+// ##########
+$ease-main: .3s ease;
+
+// ##########
+// Шрифты
+// ##########
+$font-main: 'Gotham', sans-serif;
+$font-second: 'Roboto', sans-serif;
+$font-third: 'OpenSans', sans-serif;
+$font-nav: 'MyriadPro', sans-serif;
+$font-awesome: 'FontAwesome', sans-serif;

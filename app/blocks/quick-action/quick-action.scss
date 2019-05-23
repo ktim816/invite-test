@@ -1,0 +1,32 @@
+.quick-action {
+  display: flex;
+
+  $this: &;
+
+  @include screen('xs') {
+    flex-direction: column;
+  }
+
+  &__icon-wrap {
+    margin-top: 8px;
+    margin-right: 34px;
+
+    @include screen('xs') {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    @include size(70px);
+  }
+
+  &__title {
+    @include heading-3;
+  }
+
+  &__description {
+    @include text;
+  }
+}
